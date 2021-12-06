@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39331c2c-165d-4ba4-9b96-b55764e3c423" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techreturners/exercise001/Exercise001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techreturners/exercise001/Exercise001.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise002/Exercise002Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise002/Exercise002Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise003/Exercise003Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise003/Exercise003Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise004/Exercise004Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise004/Exercise004Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise005/Exercise005Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/techreturners/exercise005/Exercise005Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
