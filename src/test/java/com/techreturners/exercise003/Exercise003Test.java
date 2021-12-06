@@ -15,6 +15,7 @@ public class Exercise003Test {
         ex003 = new Exercise003();
     }
 
+    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetIceCreamCodeForMintChocolateChip() {
         String iceCreamFlavour = "Mint Chocolate Chip";
