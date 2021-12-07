@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise004Test {
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenDateIsSpecified() {
 
@@ -21,7 +20,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -31,7 +29,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 
