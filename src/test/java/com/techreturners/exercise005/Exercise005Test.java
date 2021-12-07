@@ -61,4 +61,24 @@ public class Exercise005Test {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
     }
 
+    @Test
+    public void checkSentenceWithPunctuationIsAPangram() {
+        assertTrue(ex005.isPangram("Pack my box - with five dozen liquor jugs!"));
+    }
+
+    @Test
+    public void checkValidLengthWithNoAtoZcharsIsNotAPangram() {
+        assertFalse(ex005.isPangram("@:;1234567890-####!!!!@@@@@"));
+    }
+
+    @Test
+    public void checkEmailAddressFormatIsAPangram() {
+        assertTrue(ex005.isPangram("packmyboxwith@fivedozenliquorjugs.com"));
+    }
+
+    @Test
+    public void checkPerfectLowerCaseSentenceWithDuplicatesIsAPangram() {
+        assertTrue(ex005.isPangram("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"));
+    }
+
 }

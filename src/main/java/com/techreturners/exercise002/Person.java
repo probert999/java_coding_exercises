@@ -3,14 +3,14 @@ package com.techreturners.exercise002;
 public class Person {
     private String firstName;
     private String lastName;
-    private String fromLocation;
+    private String city;
     private int age;
 
 
-    public Person(String firstName, String lastName, String fromLocation, int age) {
+    public Person(String firstName, String lastName, String city, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.fromLocation = fromLocation;
+        this.city = city;
         this.age = age;
     }
 
@@ -22,8 +22,8 @@ public class Person {
         return lastName;
     }
 
-    public String getLocation() {
-        return fromLocation;
+    public String getCity() {
+        return city;
     }
 
     public int getAge() {

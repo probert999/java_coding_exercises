@@ -47,5 +47,44 @@ public class Exercise003Test {
         assertEquals(expected, ex003.iceCreamFlavours());
     }
 
+    @Test
+    public void checkGetIceCreamCodeForMissingIceCream() {
+        String iceCreamFlavour = "Banana";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForBlankIceCream() {
+        String iceCreamFlavour = "";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForTwoIceCreams() {
+        String iceCreamFlavour = "Vanilla & Chocolate";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForConfusedIceCream() {
+        String iceCreamFlavour = "Chip Chocolate Mint";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForPartialIceCreamName() {
+        String iceCreamFlavour = "Raspberry";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
 
 }

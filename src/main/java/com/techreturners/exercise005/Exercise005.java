@@ -2,12 +2,16 @@ package com.techreturners.exercise005;
 
 public class Exercise005 {
 
+    private static int minLengthforPangram = 26;
+
     public boolean isPangram(String input) {
-        boolean isPangram = true;
 
         input = input.toLowerCase();
         char charLookup = 'a';
-        do
+
+        boolean isPangram = (input.length() >= minLengthforPangram);
+
+        while (isPangram && charLookup <= 'z')
         {
             if (input.indexOf(charLookup) >= 0)
             {
@@ -17,8 +21,7 @@ public class Exercise005 {
             {
                 isPangram = false;
             }
-        } while (isPangram && charLookup <= 'z');
-
+        }
         return isPangram;
     }
 
