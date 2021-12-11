@@ -6,38 +6,56 @@ import java.math.RoundingMode;
 import java.lang.StringBuilder;
 
 public class Exercise001 {
-    public String capitalizeWord(String word) {
-        return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+  public String capitalizeWord(String word) {
+    if (word != null && word.length() > 0) {
+      word = Character.toUpperCase(word.charAt(0)) + word.substring(1);
+    }
+    return word;
+  }
+
+  public String generateInitials(String firstName, String lastName) {
+    String initials = "";
+
+    if (firstName != null && firstName.length() > 0) {
+      initials = String.valueOf(Character.toUpperCase(firstName.charAt(0)));
+    }
+    if (lastName != null && lastName.length() > 0) {
+      String lastNameInitial = "";
+      lastNameInitial = String.valueOf(Character.toUpperCase(lastName.charAt(0)));
+      if (initials.length() > 0) {
+        initials = initials + "." + lastNameInitial;
+      } else {
+        initials = lastNameInitial;
+      }
     }
 
-    public String generateInitials(String firstName, String lastName) {
-        return Character.toUpperCase(firstName.charAt(0)) + "." + Character.toUpperCase(lastName.charAt(0));
+    return initials;
+  }
+
+  public double addVat(double originalPrice, double vatRate) {
+    BigDecimal vatAdded = new BigDecimal(originalPrice * (1 + (vatRate / 100)));
+    vatAdded = vatAdded.setScale(2, RoundingMode.HALF_DOWN);
+
+    return vatAdded.doubleValue();
+  }
+
+  public String reverse(String sentence) {
+    if (sentence != null) {
+      sentence = new StringBuilder(sentence).reverse().toString();
     }
+    return sentence;
+  }
 
-    public double addVat(double originalPrice, double vatRate) {
-        BigDecimal vatAdded = new BigDecimal(originalPrice * (1 + (vatRate / 100)));
-        vatAdded = vatAdded.setScale(2,RoundingMode.HALF_DOWN);
+  public int countLinuxUsers(List<User> users) {
+    int linuxUserCount = 0;
 
-        return vatAdded.doubleValue();
-    }
-
-    public String reverse(String sentence) {
-        StringBuilder revSentence = new StringBuilder(sentence).reverse();
-        return revSentence.toString();
-    }
-
-    public int countLinuxUsers(List<User> users) {
-        int linuxUserCount = 0;
-
-        for (int i = 0; i < users.size(); i++)
-        {
-            User checkUser = users.get(i);
-            String osType = checkUser.getType();
-            if (osType.compareTo("Linux") == 0)
-            {
-                linuxUserCount++;
-            }
+    if (users != null) {
+      for (int userIndex = 0; userIndex < users.size(); userIndex++) {
+        if (users.get(userIndex).getType().equals("Linux")) {
+          linuxUserCount++;
         }
-        return linuxUserCount;
+      }
     }
+    return linuxUserCount;
+  }
 }
