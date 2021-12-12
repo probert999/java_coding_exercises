@@ -4,6 +4,7 @@ import java.util.List;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.lang.StringBuilder;
+import java.util.stream.Collectors;
 
 public class Exercise001 {
   public String capitalizeWord(String word) {
@@ -57,5 +58,13 @@ public class Exercise001 {
       }
     }
     return linuxUserCount;
+  }
+
+  public long countLinuxUsersUsingStream(List<User> users) {
+    return (users == null)
+        ? 0
+        : users.stream()
+            .filter(User -> User.getType().equals("Linux"))
+            .collect(Collectors.counting());
   }
 }

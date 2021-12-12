@@ -87,12 +87,15 @@ public class Exercise001Test {
     users.add(u2);
     assertEquals(0, ex001.countLinuxUsers(users));
 
+    assertEquals(0, ex001.countLinuxUsersUsingStream(users));
+
     users = new ArrayList<User>();
     users.add(u1);
     users.add(u2);
     users.add(u3);
     users.add(u4);
     assertEquals(2, ex001.countLinuxUsers(users));
+    assertEquals(2, ex001.countLinuxUsersUsingStream(users));
   }
 
   @Test
