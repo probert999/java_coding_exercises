@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.Ignore;
 
+
 import static org.junit.Assert.assertEquals;
 
 public class Exercise003Test {
@@ -87,5 +88,24 @@ public class Exercise003Test {
     int expected = -1;
 
     assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+  }
+
+  @Test
+  public void checkGetIceCreamCodeFunction() {
+    String iceCreamFlavour = "Mint Chocolate Chip";
+    int expected = 3;
+
+    assertEquals(expected, ex003.getIceCreamCodeFunction.apply(iceCreamFlavour).intValue());
+
+  }
+
+  @Test
+  public void checkPickMultipleIceCreamFlavoursFunction() {
+
+    String[] expected = {
+            "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet"
+    };
+
+    assertEquals(expected, ex003.iceCreamFlavoursFunction.get());
   }
 }

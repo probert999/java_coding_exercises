@@ -4,7 +4,6 @@ import java.util.List;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.lang.StringBuilder;
-import java.util.stream.Collectors;
 
 public class Exercise001 {
   public String capitalizeWord(String word) {
@@ -21,8 +20,7 @@ public class Exercise001 {
       initials = String.valueOf(Character.toUpperCase(firstName.charAt(0)));
     }
     if (lastName != null && lastName.length() > 0) {
-      String lastNameInitial = "";
-      lastNameInitial = String.valueOf(Character.toUpperCase(lastName.charAt(0)));
+      String lastNameInitial = String.valueOf(Character.toUpperCase(lastName.charAt(0)));
       if (initials.length() > 0) {
         initials = initials + "." + lastNameInitial;
       } else {
@@ -51,8 +49,8 @@ public class Exercise001 {
     int linuxUserCount = 0;
 
     if (users != null) {
-      for (int userIndex = 0; userIndex < users.size(); userIndex++) {
-        if (users.get(userIndex).getType().equals("Linux")) {
+      for (User user : users) {
+        if (user.getType().equals("Linux")) {
           linuxUserCount++;
         }
       }
@@ -61,10 +59,8 @@ public class Exercise001 {
   }
 
   public long countLinuxUsersUsingStream(List<User> users) {
-    return (users == null)
-        ? 0
-        : users.stream()
-            .filter(User -> User.getType().equals("Linux"))
-            .collect(Collectors.counting());
+    return users != null
+        ? users.stream().filter(User -> User.getType().equals("Linux")).count()
+        : 0;
   }
 }

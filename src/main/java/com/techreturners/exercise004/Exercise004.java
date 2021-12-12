@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 
 public class Exercise004 {
 
-  private int gigasecond = 1000000000;
+  private final int GIGASECOND = 1000000000;
 
   private LocalDateTime storedDate = LocalDateTime.now();
 
@@ -20,7 +20,7 @@ public class Exercise004 {
   public LocalDateTime getDateTime() {
     LocalDateTime returnDate = storedDate;
     try {
-      returnDate = storedDate.plusSeconds(gigasecond);
+      returnDate = storedDate.plusSeconds(GIGASECOND);
     } catch (Exception exception) {
     }
 
